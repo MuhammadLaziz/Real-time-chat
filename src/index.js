@@ -2,27 +2,25 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import { createContext } from 'react'
 
-import firebase from 'firebase';
-import 'firebase/auth';
-import 'firebase/firestore';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 
-firebase.initializeApp = ({
-  apiKey: "AIzaSyAUnJfPqJJxFg6w7fRwiqcIB5vo9T4odLM",
-  authDomain: "real-time-chat-55577.firebaseapp.com",
-  projectId: "real-time-chat-55577",
-  storageBucket: "real-time-chat-55577.appspot.com",
-  messagingSenderId: "800653128486",
-  appId: "1:800653128486:web:913cb443bd8205ff9587e7",
-  measurementId: "G-2ZP1BCMS1K"
-});
+const firebaseConfig = {
+  apiKey: "AIzaSyASkamIjtj5U22IVnguiIZe0Lq8TmxOwME",
+  authDomain: "samm-7b31b.firebaseapp.com",
+  projectId: "samm-7b31b",
+  storageBucket: "samm-7b31b.appspot.com",
+  messagingSenderId: "898369978099",
+  appId: "1:898369978099:web:473e6bc82b293069e9c186",
+  measurementId: "G-C30RNTYJFG"
+};
 
-
-export const Context = createContext(null)
-const firestore = firebase.firestore();
+const firebaseApp = firebase.initializeApp(firebaseConfig)
+const firestore = firebaseApp.firestore();
 const auth = firebase.auth();
-
+export {auth, firestore}
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,13 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Button, Container, Grid } from "@mui/material";
 import { Box } from "@mui/system";
 import firebase from "firebase/compat/app";
-// import { auth } from "../config";
-import Context from "../index";
+import { auth } from "../index";
 
 
 export default function Login() {
-  const {auth} = useContext(Context)
 
   const loged = async () => {
     const provider = new firebase.auth.GoogleAuthProvider();
