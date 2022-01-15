@@ -1,15 +1,16 @@
 import React from "react";
 import { Button, Container, Grid } from "@mui/material";
 import { Box } from "@mui/system";
-import firebase from "firebase/compat/app";
-import { auth } from "../index";
+import { auth, provider } from "../index";
+import { signInWithPopup } from "firebase/auth";
 
 
 export default function Login() {
 
   const loged = async () => {
-    const provider = new firebase.auth.GoogleAuthProvider();
-    const { user } = await auth.signInWithPopup(provider);
+
+    const { user } = await signInWithPopup(auth, provider)
+
     console.log(user);
   };
 

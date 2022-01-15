@@ -15,7 +15,7 @@ export default function Loader() {
             alignItems={"center"}
             direction={'column'}
           >
-            <div class="lds-hourglass"></div>
+            <div className="lds-hourglass"></div>
           </Grid>
         </Grid>
       </Container>

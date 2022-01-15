@@ -12,6 +12,6 @@ export const publicRoutes = [
 export const privateRoutes = [
     {
         path: Chat_Route,
-        Component: Chat 
+        Component: Chat  
     }
 ]

@@ -7,11 +7,11 @@ import { auth } from ".";
 import Loader from "./components/Loader";
 
 function App() {
-  const [loading] = useAuthState(auth)
-  if (loading) {
-    return <Loader/>
-    
-  }
+  // const [loading] = useAuthState(auth)
+  // if (loading) {
+  //   return <Loader/>
+  // }
+  
   return (
     <BrowserRouter>
       <Navbar />

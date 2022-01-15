@@ -3,7 +3,7 @@ import { AppBar, Toolbar, Button, Grid } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import { Login_Route } from "../utilities/const";
 import {useAuthState} from 'react-firebase-hooks/auth'
-import { auth } from "..";
+import { auth, firestore } from "..";
 
 
 export default function Navbar() {

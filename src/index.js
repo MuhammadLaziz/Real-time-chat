@@ -6,6 +6,9 @@ import App from "./App";
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
+import { getAuth, GoogleAuthProvider } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from 'firebase/storage'
 
 const firebaseConfig = {
   apiKey: "AIzaSyASkamIjtj5U22IVnguiIZe0Lq8TmxOwME",
@@ -18,9 +21,12 @@ const firebaseConfig = {
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig)
-const firestore = firebaseApp.firestore();
-const auth = firebase.auth();
-export {auth, firestore}
+const auth = getAuth(firebaseApp);
+const db = getFirestore()
+const storage = getStorage()
+const provider = new GoogleAuthProvider()
+
+export {auth, storage, db, provider}
 
 ReactDOM.render(
   <React.StrictMode>
